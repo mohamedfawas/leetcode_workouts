@@ -3,18 +3,14 @@ package main
 import "fmt"
 
 func sumOfTheDigitsOfHarshadNumber(x int) int {
-	var count, sum int
-	for i := 1; i*i <= x; i++ {
-		if x%i == 0 {
-			count++
-			sum += i
-			if (x / i) != i {
-				count++
-				sum += int(x / i)
-			}
-		}
+	var initial_int, last_digit, sum int
+	initial_int = x
+	for x > 0 {
+		last_digit = x % 10
+		sum += last_digit
+		x /= 10
 	}
-	if count > 0 {
+	if initial_int%sum == 0 {
 		return sum
 	} else {
 		return -1
@@ -22,5 +18,8 @@ func sumOfTheDigitsOfHarshadNumber(x int) int {
 }
 
 func main() {
-	fmt.Println("test")
+	fmt.Println("Give an integer to test : ")
+	var num int
+	fmt.Scan(&num)
+	fmt.Println(sumOfTheDigitsOfHarshadNumber(num))
 }
