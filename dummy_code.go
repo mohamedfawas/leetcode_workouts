@@ -3,6 +3,22 @@ package main
 
 import "fmt"
 
+type Person struct {
+	Name string
+	Age  int
+}
+
 func main() {
-	fmt.Println()
+	names := []string{"A", "B", "C"}
+	age := []int{11, 12, 13}
+
+	var people []Person
+
+	for i := 0; i < len(names); i++ {
+		person := Person{Name: names[i], Age: age[i]}
+		people = append(people, person)
+	}
+
+	fmt.Println(people)
+
 }
