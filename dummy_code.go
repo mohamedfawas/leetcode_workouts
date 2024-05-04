@@ -1,13 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+func numIdenticalPairs(nums []int) int {
+	var count int
+	numsMap := make(map[int]int)
+	for i := 0; i < len(nums); i++ {
+		numsMap[nums[i]]++
+	}
+	fmt.Println(numsMap)
+	for _, element := range numsMap {
+		fmt.Println("element ; ", element)
+		count += element * (element - 1) / 2
+	}
+	return count
+}
 
 func main() {
-	arr1 := []string{"a", "r", "s", "e", "h"}
-	arr2 := []int{1, 2, 3, 4, 5}
-	mp1 := make(map[string]int)
-	for i := 0; i < len(arr1); i++ {
-		mp1[arr1[i]] = arr2[i]
-	}
-	fmt.Println(mp1)
+	nums1 := []int{1, 2, 3, 1, 1, 3, 4}
+	// numIdenticalPairs(nums1)
+	fmt.Println(numIdenticalPairs(nums1))
 }
