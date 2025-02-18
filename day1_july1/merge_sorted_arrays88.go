@@ -26,4 +26,6 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 		p--
 	}
 
+	// if there are remaining elements in nums1, they are already correctly positioned.
+
 }

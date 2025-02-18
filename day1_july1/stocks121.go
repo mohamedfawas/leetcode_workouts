@@ -12,7 +12,3 @@ func maxProfit(prices []int) int {
 	}
 	return maxProfit
 }
-
-func main() {
-
-}

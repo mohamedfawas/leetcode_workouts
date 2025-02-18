@@ -1,14 +1,14 @@
 package main
 
 func containsDuplicate(nums []int) bool {
-	numFreq := make(map[int]int)
-	for _, v := range nums {
-		numFreq[v]++
-	}
-	for _, count := range numFreq {
-		if count > 1 {
+	numRecord := make(map[int]bool)
+	for _, num := range nums {
+		if numRecord[num] {
 			return true
+		} else {
+			numRecord[num] = true
 		}
 	}
+
 	return false
 }

@@ -24,11 +24,11 @@ func exampleProblem(candyType []int) {
 	fmt.Println(uniqueCandies)
 }
 
-func main() {
-	fmt.Println("example of how map works ")
-	candyType := []int{1, 1, 2, 2, 3, 3}
-	exampleProblem(candyType)
-	fmt.Println("=====================")
+// func main() {
+// 	fmt.Println("example of how map works ")
+// 	candyType := []int{1, 1, 2, 2, 3, 3}
+// 	exampleProblem(candyType)
+// 	fmt.Println("=====================")
 
-	fmt.Println(distributeCandies(candyType))
-}
+// 	fmt.Println(distributeCandies(candyType))
+// }
